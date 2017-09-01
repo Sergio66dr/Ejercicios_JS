@@ -1,4 +1,4 @@
-function palindromo(fra) {
+exports.palindromo = function (fra) {
     // Convierto la cadena a minúscula
     var minuscula = fra.toLowerCase();
     // Convierto la cadena en un array
@@ -28,20 +28,20 @@ function palindromo(fra) {
     }
 };
 
-function palabrasEnCadena(cadena){
+exports.palabrasCadena = function(cadena){
     return cadena.split(" ").length;
-}
+};
 
-function cantidadLetra(cadena){
+exports.cantidadLetra = function(cadena){
     ArrayCAdena = cadena.split(" ");
     cant = 0;
     for(i in ArrayCAdena){
         cant += ArrayCAdena[i].length;
     }
     return cant;
-}
+};
 
-function numeroVocales(cadena){
+exports.numeroVocales = function (cadena){
     ArrayCAdena = cadena.split("");
     cant = 0;
     for(i in ArrayCAdena){
@@ -62,9 +62,9 @@ function numeroVocales(cadena){
         }
     }
     return cant;
-}
+};
 
-function numeroConso(cadena){
+exports.numeroConso = function (cadena){
     ArrayCAdena = cadena.split("");
     cant = 0;
     for(i in ArrayCAdena){
@@ -77,14 +77,4 @@ function numeroConso(cadena){
         }
     }
     return cant;
-}
-
-//console.log(palindromo("Anita lava la tina"));
-console.log(numeroConso("Hola"));
-
-
-exports.numeroConso1=numeroConso;
-exports.palindromo1=palindromo;
-exports.palabrasEnCadena1=palabrasEnCadena;
-exports.cantidadLetra1=cantidadLetra;
-exports.numeroVocales1=numeroVocales;
+};
